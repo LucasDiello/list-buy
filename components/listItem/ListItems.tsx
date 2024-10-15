@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { CheckIcon, MoreVertical } from "lucide-react";
 import DropdownCategory from "@/components/dropdown/DropDownCategory";
 import DropDownUnit from "@/components/dropdown/DropDownUnit";
@@ -22,8 +22,15 @@ const ListItems = () => {
     handleSubmit,
     toggleComplete,
     setNewItem,
+    getAllItems,
   } = useItems();
 
+  useEffect(() => {
+    (async () => {
+    await getAllItems();
+    })();
+  }, []);
+  
   return (
     <section className="w-full h-[100vh] flex justify-center items-center flex-col">
       <div>

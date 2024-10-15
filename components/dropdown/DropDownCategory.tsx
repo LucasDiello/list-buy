@@ -14,7 +14,7 @@ export type Icons = {
 };
 export type Item = {
   id: string;
-  item: string;
+  name: string;
   quantity: number;
   unit: string;
   category: string;

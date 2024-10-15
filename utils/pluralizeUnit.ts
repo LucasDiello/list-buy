@@ -1,10 +1,10 @@
 const pluralizeUnit = (unit: string, quantity: number) => {
     const unitPlurals: { [key: string]: string } = {
-      un: "unidades",
+      Unidade: "unidades",
       Kg: "Kg",
       L: "Litros",
     };
-    return quantity > 1 ? unitPlurals[unit] || unit : unit;
+    return Number(quantity) > 1 ? unitPlurals[unit] || unit : unit;
   };
   
   export default pluralizeUnit;

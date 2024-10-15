@@ -5,7 +5,6 @@ import { dataUnit } from "@/icons/CategoryIcons";
 import { customStylesUnit } from "@/utils/customStyles";
 import { Item } from "./DropDownCategory";
 
-
 const InputUnit = ({
   handleChange,
   setNewItem,
@@ -43,21 +42,22 @@ const InputUnit = ({
             name="quantity"
             value={newItem.quantity}
             placeholder="1"
-            onChange={handleChange}
+            onChange={(e) => handleChange(e)}
             required
             className="focus:border-purple-light h-[40px] pl-3 text-body w-[75px] rounded-tl-md rounded-bl-md bg-gray-500 border-[1px] border-gray-300"
           />
         </div>
         <div className="flex">
           <Select
+            isSearchable={false}
             options={dataUnit}
             styles={customStylesUnit}
             placeholder="UN."
             components={{
               DropdownIndicator: customDropdownIndicator,
             }}
-            onChange={(item: any) =>
-              setNewItem({ ...newItem, unit: item?.label || "" })
+            onChange={(item) =>
+              setNewItem({ ...newItem, unit:item?.label})
             }
             onMenuOpen={() => setIsFocus(true)}
             onMenuClose={() => setIsFocus(false)}

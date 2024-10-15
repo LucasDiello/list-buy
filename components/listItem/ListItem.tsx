@@ -2,15 +2,19 @@
 import { categoryColors, categoryTextColors, Icons } from '@/icons/CategoryIcons'
 import pluralizeUnit from '@/utils/pluralizeUnit'
 import { CheckIcon, MoreVertical } from 'lucide-react'
-import React from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { Item } from '../dropdown/DropDownCategory';
+import apiRequest from '@/lib/apiRequest';
+import axios from 'axios';
 
-const ListItem = ({
-    items, toggleComplete
+const ListItem = ({items,
+   toggleComplete
 } : {
   items: Item[],
-  toggleComplete: (id: string) => void
+  toggleComplete: (item: Item) => void
 }) => {
+
+
   return (
     <ul className="mt-10">
     {items.map((item) => (
@@ -29,7 +33,7 @@ const ListItem = ({
                 </div>
                 <label
                   className="rounded-sm border-[1px] hover:bg-[rgb(81,154,87)] cursor-pointer hover:border-[rgb(81,154,87)] border-[rgb(53,117,58)] h-4 w-4 bg-[rgb(53,117,58)] flex justify-center items-center"
-                  onClick={() => toggleComplete(item.id)}
+                  onClick={() => toggleComplete(item)}
                 >
                   <CheckIcon size={10} />
                 </label>
@@ -39,14 +43,14 @@ const ListItem = ({
                 <input
                   type="checkbox"
                   checked={item.completed}
-                  onChange={() => toggleComplete(item.id)}
+                  onChange={() => toggleComplete(item)}
                   className="appearance-none w-4 h-4 bg-inherit hover:cursor-pointer hover:bg-purple-dark border-purple-light border-[1px] rounded-sm"
                 />
               </div>
             )}
           </div>
           <div>
-            <h2 className={`text-heading2 ${item.completed && "line-through"}`}>{item.item}</h2>
+            <h2 className={`text-heading2 ${item.completed && "line-through"}`}>{item.name}</h2>
             <p className="text-body text-gray-200">
               {item.quantity} {pluralizeUnit(item.unit, item.quantity)}
             </p>

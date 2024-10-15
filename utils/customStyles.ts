@@ -23,6 +23,7 @@ export const customStylesUnit = {
     padding: "10px 0px",
     display: "flex",
     alignItems: "center",
+    borderRadius: "4px",
   }),
   menu: (provided: any) => ({
     ...provided,
@@ -30,19 +31,14 @@ export const customStylesUnit = {
     borderRadius: "8px",
   }),
   singleValue: (provided: any) => ({
-    ...provided,
     color: "white",
-  }),
-  placeholder: (provided: any) => ({
-    ...provided,
-    color: "rgba(175, 171, 182, 1)",
-  }),
-  dropdownIndicator: (provided: any) => ({
-    ...provided,
-    color: "rgba(175, 171, 182, 1)",
-  }),
+    position: "absolute" as "absolute",
+}),
   indicatorSeparator: () => ({
     display: "none",
+  }),
+  placeholder: (base: any) => ({
+    ...base,
   }),
 };
 

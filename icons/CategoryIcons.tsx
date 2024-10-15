@@ -29,7 +29,7 @@ export const dataUnit : {
     label: string;
     value: string;
   }[]  = [
-    { label: "Unidade ", value: "1" },
+    { label: "Unidade", value: "1" },
     { label: "L", value: "2" },
     { label: "Kg", value: "3" },
   ];
