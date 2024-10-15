@@ -1,8 +1,0 @@
-input:checked + span > span {  
-    display: block;  
-  } 
-
-input:focus,
-select:focus {
-    outline: none;
-}
