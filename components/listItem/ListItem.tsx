@@ -3,9 +3,7 @@ import { categoryColors, categoryTextColors, Icons } from '@/icons/CategoryIcons
 import pluralizeUnit from '@/utils/pluralizeUnit'
 import { CheckIcon, MoreVertical } from 'lucide-react'
 import React, { useCallback, useEffect } from 'react'
-import { Item } from '../dropdown/DropDownCategory';
-import apiRequest from '@/lib/apiRequest';
-import axios from 'axios';
+import { Item } from '@/types';
 
 const ListItem = ({items,
    toggleComplete

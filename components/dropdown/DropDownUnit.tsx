@@ -3,7 +3,7 @@ import Select from "react-select";
 import { ChevronUp, ChevronDown } from "lucide-react"; // Importe ícones que desejar
 import { dataUnit } from "@/icons/CategoryIcons";
 import { customStylesUnit } from "@/utils/customStyles";
-import { Item } from "./DropDownCategory";
+import { Item } from "@/types";
 
 const InputUnit = ({
   handleChange,

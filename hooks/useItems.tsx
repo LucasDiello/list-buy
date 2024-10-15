@@ -1,5 +1,5 @@
-import { Item } from "@/components/dropdown/DropDownCategory";
 import apiRequest from "@/lib/apiRequest";
+import { Item } from "@/types";
 import { useState } from "react";
 
 const useItems = () => {

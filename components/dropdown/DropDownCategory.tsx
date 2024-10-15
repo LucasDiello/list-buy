@@ -4,22 +4,6 @@ import { Milk, Beef, Apple, Carrot, Sandwich, Check, Icon, ArrowUp, ArrowDown, C
 import { customStylesCategory } from "@/utils/customStyles";
 import {  dataCategory, iconsCategory } from "@/icons/CategoryIcons";
 
-export type DataItems = {
-  label: string;
-  value: string;
-};
-
-export type Icons = {
-  [key: string]: JSX.Element;
-};
-export type Item = {
-  id: string;
-  name: string;
-  quantity: number;
-  unit: string;
-  category: string;
-  completed: boolean;
-};
 const DropdownCategory = ({ setNewItem, category, newItem }: { setNewItem: (item: Item) => any; category: string, newItem: Item }) => {
     const [isFocus, setIsFocus] = useState<boolean>(false);
 

@@ -1,5 +1,5 @@
+import { Item } from '@/types'
 import React from 'react'
-import { Item } from '../dropdown/DropDownCategory'
 
 const InpuTextItem = ({newItem, handleChange} : {
     newItem: Item,
