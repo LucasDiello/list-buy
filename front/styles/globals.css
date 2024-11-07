@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+  background-color: inherit;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 10px;
+}
