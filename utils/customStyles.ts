@@ -13,7 +13,6 @@ export const customStylesUnit = {
     cursor: "pointer",
   }),
   option: (provided: any, state: any) => ({
-    ...provided,
     backgroundColor: state.isSelected
       ? "#252529"
       : state.isFocused
@@ -23,17 +22,27 @@ export const customStylesUnit = {
     padding: "10px 0px",
     display: "flex",
     alignItems: "center",
-    borderRadius: "4px",
+    cursor: "pointer",
+    // Adicionando arredondamento ao primeiro e último item ao passar o mouse
+    borderTopLeftRadius: state.data.value === "1" ? "5px" : "0",
+    borderTopRightRadius: state.data.value === "1" ? "5px" : "0",
+    borderBottomLeftRadius: state.data.value === "3" ? "5px" : "0",
+    borderBottomRightRadius: state.data.value === "3" ? "5px" : "0",
   }),
   menu: (provided: any) => ({
     ...provided,
     backgroundColor: "rgba(23, 23, 26, 1)",
-    borderRadius: "8px",
+    marginTop: "4px",
+    padding: "0",
+  }),
+  menuList: (provided: any) => ({
+    ...provided,
+    padding: "0",
   }),
   singleValue: (provided: any) => ({
     color: "white",
     position: "absolute" as "absolute",
-}),
+  }),
   indicatorSeparator: () => ({
     display: "none",
   }),
@@ -56,23 +65,31 @@ export const customStylesCategory = {
     cursor: "pointer",
   }),
   option: (provided: any, state: any) => ({
-    ...provided,
     backgroundColor: state.isSelected
       ? "#252529"
       : state.isFocused
-      ? "#3b3b3d"
-      : "transparent",
+      && "#3b3b3d" ,
     color: "white",
     padding: "10px",
     display: "flex",
     alignItems: "center",
+    cursor: "pointer",
+    // Adicionando arredondamento ao primeiro e último item ao passar o mouse
+    borderTopLeftRadius: state.data.value === "1" ? "5px" : "0",
+    borderTopRightRadius: state.data.value === "1" ? "5px" : "0",
+    borderBottomLeftRadius: state.data.value === "5" ? "5px" : "0",
+    borderBottomRightRadius: state.data.value === "5" ? "5px" : "0",
   }),
   menu: (provided: any) => ({
     ...provided,
     backgroundColor: "rgba(23, 23, 26, 1)",
-    borderRadius: "8px",
+    marginTop: "4px", // Remover qualquer margem superior
   }),
-  singleValue: (provided: any) => ({
+  menuList: (provided: any) => ({
+    ...provided,
+    padding: "0", // Remover padding extra
+  }),
+  singleValue: (provided: any, state: any) => ({
     ...provided,
     color: "white",
   }),

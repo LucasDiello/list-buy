@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Select from "react-select";
-import { ChevronUp, ChevronDown } from "lucide-react"; // Importe ícones que desejar
+import { ChevronUp, ChevronDown } from "lucide-react"; 
 import { dataUnit } from "@/icons/CategoryIcons";
 import { customStylesUnit } from "@/utils/customStyles";
 import { Item } from "@/types";
@@ -67,6 +67,7 @@ const InputUnit = ({
               </div>
             )}
             value={dataUnit.find((item) => item.label === unit) || null}
+            closeMenuOnSelect={false}
             className="text-body w-[75px] "
           />
         </div>

@@ -14,7 +14,7 @@ const ListItem = ({items,
 
 
   return (
-    <ul className="mt-10">
+    <ul className="mt-10  max-h-[50vh] overflow-y-auto">
     {items.map((item) => (
       <div
         key={item.id}

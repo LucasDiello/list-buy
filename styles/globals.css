@@ -13,3 +13,13 @@ input:focus,
 select:focus {
     outline: none;
 }
+
+::-webkit-scrollbar {
+  background-color: inherit;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4B5563;
+  border-radius: 10px;
+}

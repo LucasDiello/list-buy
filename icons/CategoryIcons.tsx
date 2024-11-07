@@ -25,32 +25,31 @@ export const categoryTextColors: { [key: string]: string } = {
   Bebida: "rgb(123, 148, 203, 1)",
 };
 
-export const dataUnit : {
-    label: string;
-    value: string;
-  }[]  = [
-    { label: "Unidade", value: "1" },
-    { label: "L", value: "2" },
-    { label: "Kg", value: "3" },
-  ];
+export const dataUnit: {
+  label: string;
+  value: string;
+}[] = [
+  { label: "Unidade", value: "1" },
+  { label: "L", value: "2" },
+  { label: "Kg", value: "3" },
+];
 
+export const dataCategory: {
+  label: string;
+  value: string;
+}[] = [
+  { label: "Padaria", value: "1" },
+  { label: "Legume", value: "2" },
+  { label: "Carne", value: "3" },
+  { label: "Fruta", value: "4" },
+  { label: "Bebida", value: "5" },
+];
 
- export const dataCategory: {
-    label: string;
-    value: string;
-  }[] = [
-    { label: "Padaria", value: "1" },
-    { label: "Legume", value: "2" },
-    { label: "Carne", value: "3" },
-    { label: "Fruta", value: "4" },
-    { label: "Bebida", value: "5" },
-];  
-
-  export const iconsCategory : { [key: string]: JSX.Element } = {
-    "1": <Sandwich size={20} color="#BB9F3A" />,
-    "2": <Carrot size={20} color="#8CAD51" />,
-    "3": <Beef size={20} color="#DB5BBF" />,
-    "4": <Apple size={20} color="#E07B67" />,
-    "5": <Milk size={20} color="#7B94CB" />,
-    "6": <Check size={20} color="#A881E6" />,
+export const iconsCategory: { [key: string]: JSX.Element } = {
+  "1": <Sandwich size={20} color="#BB9F3A" />,
+  "2": <Carrot size={20} color="#8CAD51" />,
+  "3": <Beef size={20} color="#DB5BBF" />,
+  "4": <Apple size={20} color="#E07B67" />,
+  "5": <Milk size={20} color="#7B94CB" />,
+  "6": <Check size={20} color="#A881E6" />,
 };
